@@ -1,13 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ccc;
+  height: 10vh;
+}
+.nav-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vmin;
+}
+.nav-one a {
+  text-decoration: none;
+}
+.nav-two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35vmin;
+}
+.btn {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: #8c38ff;
+  outline: none;
+  border: none;
+  color: aliceblue;
+}
+main {
+  background: url("https://c0.wallpaperflare.com/preview/332/734/571/germany-berlin-mall-of-berlin-mall.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+main::after{
+  position: absolute;
+  opacity: 0.4;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #8c38ff;
+  
 }

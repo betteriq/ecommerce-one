@@ -54,20 +54,30 @@ nav {
   color: aliceblue;
 }
 main {
-  background: url("https://c0.wallpaperflare.com/preview/332/734/571/germany-berlin-mall-of-berlin-mall.jpg");
+  background: url("./images/568622-building-commercial.jpg");
   height: 100vh;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
-main::after{
+main::after {
   position: absolute;
   opacity: 0.4;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   background-color: #8c38ff;
-  
+}
+main h1 {
+  position: absolute;
+  top: 30vmin;
+  font-size: 8rem;
+  /* color: yellow; */
+  z-index: 10;
+  text-shadow: 0px 0px 10px yellow,0px 0px 10px yellow,0px 0px 10px yellow,0px 0px 10px yellow;
 }

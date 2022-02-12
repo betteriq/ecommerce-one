@@ -42,7 +42,8 @@ nav {
   align-items: center;
   width: 35vmin;
 }
-.btn {
+.btn,
+.btn > * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding: 0.5rem 2rem;
@@ -52,6 +53,7 @@ nav {
   outline: none;
   border: none;
   color: aliceblue;
+  text-decoration: none;
 }
 main {
   background: url("./images/568622-building-commercial.jpg");
@@ -79,16 +81,17 @@ main h1 {
   font-size: 8rem;
   /* color: yellow; */
   z-index: 10;
-  text-shadow: 0px 0px 10px yellow,0px 0px 10px yellow,0px 0px 10px yellow,0px 0px 10px yellow;
+  text-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow,
+    0px 0px 10px yellow;
 }
-.products-ul{
+.products-ul {
   display: flex;
   background-color: #8c38ff;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.products-li{
+.products-li {
   background-color: #ffffff;
   width: 25rem;
   height: 25rem;
@@ -98,8 +101,41 @@ main h1 {
   align-items: center;
   border: 1px solid red;
 }
-.products-li img{
+.products-li img {
   width: 14rem;
   height: 18rem;
   border-radius: 30px;
+}
+.product {
+  display: flex;
+  width: 60rem;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  /* align-items: center; */
+}
+.product img {
+  width: 27rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px blue;
+}
+.product-second {
+  margin: 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
+}
+.product-second button {
+  width: 10rem;
+}
+.container {
+  padding: 1rem;
+}
+.main-product {
+  width: 100%;
+  height: 90vh;
+  background-color: #8c38ff;
+  display: flex;
+  justify-content: center;
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="container">
+    <div className="about container">
       <h1>Shopping Center</h1>
       <p>
         shopping centre, also called shopping mall, or shopping plaza,

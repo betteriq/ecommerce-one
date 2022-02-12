@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import Typewriter from "typewriter-effect";
 const Home = () => {
   return (

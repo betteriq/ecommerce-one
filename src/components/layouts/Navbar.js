@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import useToggle from "../useToggle";
 
 const Navbar = () => {
+  const [values, setValue] = useToggle(true);
+  useEffect(() => {
+    const pop = document.querySelectorAll("h3");
+    pop.forEach((btn) =>
+      btn.addEventListener("click", () => {
+        if (btn.classList == "liner") {
+          console.log("trueee");
+          btn.classList.remove("liner");
+        } else {
+          console.log("nooooooot");
+          btn.classList.add("liner");
+        }
+      })
+    );
+  });
+  const numbers = useSelector((state) => state.number);
   return (
     <nav>
       <h3>
@@ -20,7 +38,7 @@ const Navbar = () => {
       </div>
       <div className="nav-two">
         <button className="btn">Login</button>
-        <button className="btn">Card</button>
+        <button className="btn">Card-{numbers}</button>
       </div>
     </nav>
   );

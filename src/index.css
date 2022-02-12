@@ -115,7 +115,7 @@ main h1 {
   /* align-items: center; */
 }
 .product img {
-  width: 27rem;
+  width: 77vh;
   border-radius: 10px;
   box-shadow: 0px 0px 10px blue;
 }
@@ -146,4 +146,16 @@ main h1 {
 }
 .about p:nth-child(3){
   margin-top: 0;
+}
+.liner{
+  border-bottom: 10px solid red ;
+}
+.true{
+  background-color: green;
+}
+.false{
+  background-color: red;
+}
+.btn:active{
+  background-color: #eb6868;
 }

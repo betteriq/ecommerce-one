@@ -21,7 +21,7 @@ const Product = () => {
         <div className="product-second">
           <h2>{state.title}</h2>
           <p>{state.description}</p>
-          <button className="btn" onClick={()=>dispatcher(Add())}>Add to Cart</button>
+          <button className="btn" onClick={()=>dispatcher(Add(state))}>Add to Cart</button>
         </div>
       </div>
     </div>

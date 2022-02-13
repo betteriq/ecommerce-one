@@ -89,7 +89,7 @@ main h1 {
 }
 .products-ul {
   display: flex;
-  background-color: #8c38ff;
+  background: linear-gradient(to top right, #8c38ff, #af81f0);
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;

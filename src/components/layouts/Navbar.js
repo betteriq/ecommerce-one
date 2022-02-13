@@ -26,12 +26,13 @@ const Navbar = () => {
         </h3>
       </div>
       <div className="nav-two">
-        <Login open={isOpen} onClose={() => setOpen(false)}>
-          hi
-        </Login>
-        <button className="btn">Login</button>
+      <button onClick={() => setOpen(true)} className="btn">Login</button>
+
         <button className="btn">Card---{numbers.length}</button>
       </div>
+      <Login open={isOpen} onClose={() => setOpen(false)}>
+        assa
+      </Login>
     </nav>
   );
 };

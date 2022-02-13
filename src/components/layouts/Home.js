@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
+import Login from "./Login";
 
 
 const Home = () => {
   const [isOpen, setOpen] = useState(false);
+  
   return (
     <div>
       <main>
@@ -18,7 +20,6 @@ const Home = () => {
           />
         </h1>
       </main>
-      <button onClick={() => setOpen(true)}>Open Modal</button>
     </div>
   );
 };

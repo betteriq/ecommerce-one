@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Login from "./Login";
 
 const Navbar = () => {
   const numbers = useSelector((state) => state);
+  const [isOpen, setOpen] = useState(false);
   return (
     <nav>
       <h3>
@@ -24,10 +26,12 @@ const Navbar = () => {
         </h3>
       </div>
       <div className="nav-two">
+        <Login open={isOpen} onClose={() => setOpen(false)}>
+          hi
+        </Login>
         <button className="btn">Login</button>
-        <button className="btn">Card</button>
+        <button className="btn">Card---{numbers.length}</button>
       </div>
-      {console.log("ddddddddddddd",numbers)}
     </nav>
   );
 };

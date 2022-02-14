@@ -5,7 +5,7 @@ import Login from "./Login";
 import { VscThreeBars } from "react-icons/vsc";
 import Vsc from "./Vsc";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const numbers = useSelector((state) => state);
   const [isOpen, setOpen] = useState(false);
   const [overlay, setOverlay] = useState(true);
@@ -47,7 +47,9 @@ const Navbar = () => {
           >
             Login
           </button> */}
-          <div className="btn">licky</div>
+          <div className="btn" onClick={props.onshow}>
+            licky
+          </div>
 
           <button className="btn">Card-{numbers.length}</button>
         </div>

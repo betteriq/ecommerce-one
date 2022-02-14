@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/layouts/Home";
 import Navbar from "./components/layouts/Navbar";
@@ -10,11 +10,22 @@ import { Provider } from "react-redux";
 import created from "./components/redux/created";
 
 const App = () => {
+  const [show, setShow] = useState(false);
+
+  const shower = () => {
+    setShow(true);
+  };
+
+  const hider = () => {
+    setShow(false);
+  };
+
   return (
     <Provider store={created}>
       <div>
-        <Navbar />
-        <Home/>
+        <Navbar onshow={shower} />
+        {show && <Home onhide={hider} />}
+
         {/* <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
@@ -28,7 +39,6 @@ const App = () => {
 };
 
 export default App;
-
 
 // import React, { useState } from "react";
 // import Login from "./components/layouts/Login";

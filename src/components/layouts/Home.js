@@ -3,11 +3,9 @@ import Typewriter from "typewriter-effect";
 import Login from "./Login";
 import Modal from "./Modal";
 
-
-const Home = () => {
-  
+const Home = (props) => {
   return (
-    <Modal>
+    <Modal onhide={props.onhide}>
       <main>
         <h1>
           <Typewriter

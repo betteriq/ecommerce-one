@@ -4,7 +4,6 @@ import Login from "./Login";
 
 
 const Home = () => {
-  const [isOpen, setOpen] = useState(false);
   
   return (
     <div>

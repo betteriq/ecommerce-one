@@ -91,10 +91,14 @@ main h1 {
 }
 .products {
   display: flex;
+  flex-direction: column;
   background: linear-gradient(to top right, #8c38ff, #dbd4e6);
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.products .btn {
+  border-radius: 10px;
 }
 .products ul {
   display: flex;
@@ -109,14 +113,25 @@ main h1 {
   height: 25rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  border-radius: 10px;
+  padding: 1rem;
   /* border: 1px solid red; */
+}
+.products h3{
+  padding: 2rem;
 }
 .products-li img {
   width: 14rem;
   height: 18rem;
   border-radius: 30px;
+}
+.products-li p {
+  white-space: nowrap; 
+  width: 200px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .product {
   display: flex;
@@ -160,6 +175,7 @@ main h1 {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-top: 4rem;
   line-height: 2rem;
+  text-indent: 1rem;
 }
 .about p:nth-child(3) {
   margin-top: 0;
@@ -190,6 +206,9 @@ main h1 {
 }
 .btn:focus {
   background-color: #eb6868;
+}
+.btn:hover {
+  background-color: #a064f5;
 }
 .login {
   position: fixed;

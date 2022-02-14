@@ -11,16 +11,16 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-nav {
+.asli {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -28,7 +28,7 @@ nav {
   background-color: #ccc;
   height: 10vh;
 }
-nav > :nth-child(1) > :nth-child(1) {
+.asli > :nth-child(1) > :nth-child(1) {
   text-decoration: none;
 }
 .nav-one {
@@ -71,6 +71,9 @@ main {
   display: flex;
   justify-content: center;
   /* align-items: center; */
+}
+main h1 > * {
+  font-size: 2rem;
 }
 main::after {
   position: absolute;
@@ -119,7 +122,7 @@ main h1 {
   padding: 1rem;
   /* border: 1px solid red; */
 }
-.products h3{
+.products h3 {
   padding: 2rem;
 }
 .products-li img {
@@ -128,8 +131,8 @@ main h1 {
   border-radius: 30px;
 }
 .products-li p {
-  white-space: nowrap; 
-  width: 200px; 
+  white-space: nowrap;
+  width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -373,4 +376,33 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.vsc {
+  display: none;
+}
+.vsc-res {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.big {
+  font-size: 2rem;
+}
+@media (max-width: 480px) {
+  body {
+    background-color: #fff;
+  }
+  nav > :nth-child(1) {
+    display: none;
+  }
+  .vsc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccc;
+    height: 10vh;
+    padding: 1rem;
+  }
 }

@@ -13,6 +13,7 @@ const Contact = () => {
                 className="icon-contact"
               />
               <h4>
+                {" "}
                 Email :{" "}
                 <a href="mailto:anoushrs@gmail.com">anoushrs@gmail.com</a>
               </h4>
@@ -24,7 +25,7 @@ const Contact = () => {
                 className="icon-contact"
               />
               <h4>
-                MobNumber : <a href="tel:00989376030929">Telphon number</a>
+                MobNumber : <a href="tel:00989376030929">Mob number</a>
               </h4>
             </div>
             <div className="contact-item">

@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+a{
+  text-decoration: none;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -133,7 +135,7 @@ main h1 {
   width: 10rem;
 }
 .container {
-  padding: 1rem;
+  padding:  1rem;
 }
 .main-product {
   width: 100%;
@@ -189,14 +191,14 @@ main h1 {
   z-index: 1000;
 }
 .overlay {
-  position: "fixed";
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   padding: 500px;
-  background-color: rgba(119, 103, 103, 0.76);
-  z-index: 10010;
+  background: linear-gradient(to bottom, #8c38ff, #1b5fcc);
+  z-index: 1000;
 }
 
 
@@ -226,7 +228,7 @@ section {
 .box {
   position: relative;
 }
-.container {
+.container-form {
   position: relative;
   width: 400px;
   /* min-height: 100%; */
@@ -285,7 +287,7 @@ section {
 .form .inputbox input[type="submit"] {
   background: #fff;
   color: #666;
-  max-width: 100px;
+  max-width: 150px;
   cursor: pointer;
   margin-bottom: 20px;
   font-weight: 600;
@@ -297,4 +299,11 @@ section {
 .forget a {
   color: #fff;
   font-weight: 500;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40vh;
+  /* align-items: center; */
 }

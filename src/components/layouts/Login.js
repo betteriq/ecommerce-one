@@ -1,26 +1,7 @@
 import React, { useState } from "react";
 import ReactDom from "react-dom";
 
-const Styles = {
-  position: "fixed",
-  top: "50%",
-  left: "33%",
-  padding: "50px",
-  zIndex: 1000,
-  opacity: 1,
-};
-const Overlay = {
-  position: "fixed",
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  opacity: 0.7,
-  background: "linear-gradient(to bottom, #8c38ff, #1b5fcc)",
-  zIndex: 1000,
-};
-
-const Login = ({ open, children, onClose, overlay, setOverlay }) => {
+const Login = ({ open, children, onClose, overlay, setOverlay, onClick }) => {
   console.log("open is : ", open);
   const [signup, setSignup] = useState(false);
   const [forgot, setForgot] = useState(false);
@@ -35,8 +16,8 @@ const Login = ({ open, children, onClose, overlay, setOverlay }) => {
     <>
       {overlay && (
         <div className="main-login">
-          <div  className="overlay" />
-          <section  className="login">
+          <div className="overlay" />
+          <section className="login">
             <div class="box">
               <div class="container-form">
                 <div class="form">
@@ -108,7 +89,6 @@ const Login = ({ open, children, onClose, overlay, setOverlay }) => {
                               setLogin(true);
                               setForgot(false);
                               setOverlay(false);
-
                             }}
                           />
                         </div>
@@ -130,7 +110,7 @@ const Login = ({ open, children, onClose, overlay, setOverlay }) => {
                             onClick={() => {
                               setOverlay(false);
                               setForgot(false);
-                              setSignup(false)
+                              setSignup(false);
                               setLogin(true);
                             }}
                           />

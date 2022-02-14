@@ -30,7 +30,7 @@ const Products = () => {
     <div>
       <div className="products">
         <h3>Products we Have</h3>
-        
+
         <div>
           <button className="btn" onClick={() => filtering("men's clothing")}>
             Mens

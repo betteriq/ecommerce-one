@@ -14,13 +14,14 @@ const App = () => {
     <Provider store={created}>
       <div>
         <Navbar />
-        <Routes>
+        <Home/>
+        {/* <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products/product/:id" element={<Product />} />
-        </Routes>
+        </Routes> */}
       </div>
     </Provider>
   );

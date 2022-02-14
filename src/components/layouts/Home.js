@@ -12,7 +12,7 @@ const Home = () => {
         <h1>
           <Typewriter
             options={{
-              strings: ["Shopping dff"],
+              strings: ["Shopping Center"],
               delay: 300,
               loop: true,
               autoStart: true,

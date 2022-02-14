@@ -13,6 +13,9 @@ const Navbar = () => {
       </h3>
       <div className="nav-one">
         <h3 className="liner">
+          <Link to="/">Home</Link>
+        </h3>
+        <h3 className="liner">
           <Link to="about">About</Link>
         </h3>
         <h3 className="liner">
@@ -21,14 +24,13 @@ const Navbar = () => {
         <h3 className="liner">
           <Link to="Products">Products</Link>
         </h3>
-        <h3 className="liner">
-          <Link to="/">Home</Link>
-        </h3>
       </div>
       <div className="nav-two">
-      <button onClick={() => setOpen(true)} className="btn">Login</button>
+        <button onClick={() => setOpen(true)} className="btn">
+          Login
+        </button>
 
-        <button className="btn">Card---{numbers.length}</button>
+        <button className="btn">Card-{numbers.length}</button>
       </div>
       <Login open={isOpen} onClose={() => setOpen(false)}>
         assa

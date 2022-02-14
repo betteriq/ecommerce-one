@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDom from "react-dom";
 
 const Styles = {
@@ -8,7 +8,6 @@ const Styles = {
   padding: "50px",
   zIndex: 1000,
   opacity: 1,
-
 };
 const Overlay = {
   position: "fixed",
@@ -22,32 +21,114 @@ const Overlay = {
 };
 
 const Login = ({ open, children, onClose }) => {
+  console.log("open is : ", open);
+  const [login, setLogin] = useState(true);
+  const [signup, setSignup] = useState(false);
+  const [forgot, setForgot] = useState(false);
   if (!open) return null;
+
   return ReactDom.createPortal(
     <>
-      <div style={Overlay} className="section" />
+      <div style={Overlay} className="overlay" />
       <section style={Styles} className="login">
         <div class="box">
-          <div class="container">
+          <div class="container-form">
             <div class="form">
-              <h2>Login Form</h2>
-              <form>
-                <div class="inputbox">
-                  <input type="text" placeholder="username" />
-                </div>
-                <div class="inputbox">
-                  <input type="password" placeholder="password" />
-                </div>
-                <div class="inputbox">
-                  <input type="submit" value="login" />
-                </div>
-                <p class="forgot">
-                  Forgot password?<a href="#">Click Here</a>
-                </p>
-                <p class="forgot">
-                  Dont have an account <a href="#">Sign up</a>
-                </p>
-              </form>
+              {login && (
+                <>
+                  <h2>Login Form</h2>
+                  <form>
+                    <div class="inputbox">
+                      <input type="text" placeholder="Username" />
+                    </div>
+
+                    <div class="inputbox">
+                      <input type="password" placeholder="Password" />
+                    </div>
+                    <div class="inputbox">
+                      <input type="submit" value="Login" />
+                    </div>
+                    <p class="forgot">
+                      Forgot password?
+                      <a
+                        href="#"
+                        onClick={() => {
+                          setSignup(false);
+                          setLogin(false);
+                          setForgot(true);
+                        }}
+                      >
+                        Click Here
+                      </a>
+                    </p>
+                    <p class="forgot">
+                      Dont have an account{" "}
+                      <a
+                        href="#"
+                        onClick={() => {
+                          setSignup(true);
+                          setLogin(false);
+                          setForgot(false);
+                        }}
+                      >
+                        Sign up
+                      </a>
+                    </p>
+                  </form>
+                </>
+              )}
+              {signup && (
+                <>
+                  <h2>Sign up Form</h2>
+                  <form>
+                    <div class="inputbox">
+                      <input type="text" placeholder="Name" />
+                    </div>
+                    <div class="inputbox">
+                      <input type="text" placeholder="Family" />
+                    </div>
+                    <div class="inputbox">
+                      <input type="text" placeholder="Usename" />
+                    </div>
+                    <div class="inputbox">
+                      <input type="password" placeholder="Password" />
+                    </div>
+                    <div class="inputbox">
+                      <input
+                        type="submit"
+                        value="Register"
+                        onClick={() => {
+                          setSignup(false);
+                          setLogin(true);
+                          setForgot(false);
+                        }}
+                      />
+                    </div>
+                  </form>
+                </>
+              )}
+              {forgot && (
+                <>
+                  <h2>Forgot Password</h2>
+                  <form>
+                    <div class="inputbox">
+                      <input type="text" placeholder="Enter your Email" />
+                    </div>
+                 
+                    <div class="inputbox">
+                      <input
+                        type="submit"
+                        value="Submit"
+                        onClick={() => {
+                          setSignup(false);
+                          setLogin(true);
+                          setForgot(false);
+                        }}
+                      />
+                    </div>
+                  </form>
+                </>
+              )}
             </div>
           </div>
         </div>

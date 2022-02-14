@@ -35,7 +35,7 @@ const Navbar = () => {
           }}
           className="btn"
         >
-          Loginssssssss
+          Login
         </button>
 
         <button className="btn">Card-{numbers.length}</button>

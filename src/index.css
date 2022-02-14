@@ -45,7 +45,7 @@ nav > :nth-child(1) > :nth-child(1) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 35vmin;
+  width: 37vmin;
 }
 .btn,
 .btn > * {
@@ -89,9 +89,16 @@ main h1 {
   text-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow,
     0px 0px 10px yellow;
 }
-.products-ul {
+.products {
   display: flex;
-  background: linear-gradient(to top right, #8c38ff, #af81f0);
+  background: linear-gradient(to top right, #8c38ff, #dbd4e6);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products ul {
+  display: flex;
+  background: linear-gradient(to top right, #8c38ff, #dbd4e6);
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -186,11 +193,9 @@ main h1 {
 }
 .login {
   position: fixed;
-  top: 20px;
-  /* transform: translateX(-50%); */
-
+  top: 50%;
+  opacity: 1;
   transform: translateY(-50%);
-  background-color: rgb(109, 47, 47);
   padding: 50px;
   z-index: 1000;
 }
@@ -200,15 +205,22 @@ main h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 500px;
+  opacity: 0.7;
+  padding: 50px;
   background: linear-gradient(to bottom, #8c38ff, #1b5fcc);
   z-index: 1000;
 }
-
-body {
-  overflow: hidden;
+.main-login {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  /* height: 10000vw; */
+  /* background-color: #eb6868; */
+  /* border: 8px solid black; */
 }
-
 section {
   display: flex;
   flex-direction: row;
@@ -326,7 +338,7 @@ section {
   height: 10vh;
   width: 150vmin;
 }
-.contact-form > :nth-child(1) > :nth-child(2)>*{
+.contact-form > :nth-child(1) > :nth-child(2) > * {
   margin: 20px;
 }
 .main-container {
@@ -334,11 +346,11 @@ section {
   justify-content: center;
   align-items: center;
 }
-.icon-contact{
+.icon-contact {
   width: 10vmin;
   height: 10vmin;
 }
-.contact-item{
+.contact-item {
   display: flex;
   justify-content: center;
   align-items: center;

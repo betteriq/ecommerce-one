@@ -34,9 +34,9 @@ const Login = ({ open, children, onClose, overlay, setOverlay }) => {
   return ReactDom.createPortal(
     <>
       {overlay && (
-        <>
-          <div style={Overlay} className="overlay" />
-          <section style={Styles} className="login">
+        <div className="main-login">
+          <div  className="overlay" />
+          <section  className="login">
             <div class="box">
               <div class="container-form">
                 <div class="form">
@@ -142,7 +142,7 @@ const Login = ({ open, children, onClose, overlay, setOverlay }) => {
               </div>
             </div>
           </section>
-        </>
+        </div>
       )}
     </>,
     document.getElementById("portal")

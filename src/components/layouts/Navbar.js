@@ -6,6 +6,8 @@ import Login from "./Login";
 const Navbar = () => {
   const numbers = useSelector((state) => state);
   const [isOpen, setOpen] = useState(false);
+  const [overlay, setOverlay] = useState(true);
+
   return (
     <nav>
       <h3>
@@ -26,13 +28,27 @@ const Navbar = () => {
         </h3>
       </div>
       <div className="nav-two">
-        <button onClick={() => setOpen(true)} className="btn">
+        <button
+          onClick={() => {
+            setOpen(true);
+            setOverlay(true);
+          }}
+          className="btn"
+        >
           Login
         </button>
 
         <button className="btn">Card-{numbers.length}</button>
       </div>
-      <Login open={isOpen} onClose={() => setOpen(false)}>
+
+      <Login
+        open={isOpen}
+        onClose={() => {
+          setOpen(false);
+        }}
+        overlay={overlay}
+        setOverlay={setOverlay}
+      >
         assa
       </Login>
     </nav>

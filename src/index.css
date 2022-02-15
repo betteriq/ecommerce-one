@@ -531,4 +531,7 @@ section {
     align-items: center;
     overflow: hidden;
   }
+  .product img{
+    width: 77vw;
+  }
 }

@@ -37,9 +37,16 @@ const Card = (props) => {
                         })}
                       </ul>
                     </h4>
-                    {load && <h5 className="ctf">Total Price : {jadid.toFixed(2)} $</h5>}
+                    {load && (
+                      <h5 className="ctf">
+                        Total Price : {jadid.toFixed(2)} $
+                      </h5>
+                    )}
                   </div>
                 </div>
+                <button className="btn" onClick={props.hiderLogin}>
+                  Close
+                </button>
               </div>
             </div>
           </div>

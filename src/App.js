@@ -34,13 +34,24 @@ const App = () => {
   const showCarded = () => {
     setCard(true);
   };
+  const goger=()=>{
+    console.log("hi");
+  }
   return (
     <Provider store={created}>
       <div>
-        <Navbar onshow={showerLogin} onshowVsc={showerVsc} showCarded={showCarded}/>
+        <Navbar
+          onshow={showerLogin}
+          onshowVsc={showerVsc}
+          showCarded={showCarded}
+        />
         {showLogin && <Login hiderLogin={hiderLogin} />}
         {showVsc && (
-          <VscLogin hiderLogin={hiderLogin} showerLogin={showerLogin} />
+          <VscLogin
+            hiderLogin={hiderLogin}
+            showerLogin={showerLogin}
+            showCarded={showCarded}
+          />
         )}
         {showCard && <Card hiderLogin={hiderLogin} />}
         <Routes>

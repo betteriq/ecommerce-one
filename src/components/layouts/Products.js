@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Products = () => {
+const Products = (props) => {
   const [state, setState] = useState([]);
   const [filter, setFilter] = useState([]);
   const [load, setLoad] = useState(false);
@@ -31,7 +31,7 @@ const Products = () => {
       <div className="products">
         <h3>Products we Have</h3>
 
-        <div>
+        <div className="products-btn">
           <button className="btn" onClick={() => filtering("men's clothing")}>
             Mens
           </button>

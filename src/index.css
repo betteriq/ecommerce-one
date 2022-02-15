@@ -13,7 +13,7 @@ body {
     sans-serif;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 code {
@@ -59,6 +59,8 @@ code {
   border: none;
   color: aliceblue;
   text-decoration: none;
+  /* width: 9rem;
+  height: 2rem; */
 }
 main {
   background: url("./images/568622-building-commercial.jpg");
@@ -125,6 +127,10 @@ main h1 {
 .products h3 {
   padding: 2rem;
 }
+.products-btn{
+  display: flex;
+  flex-wrap: wrap;
+}
 .products-li img {
   width: 14rem;
   height: 18rem;
@@ -172,11 +178,14 @@ main h1 {
 .about {
   background-color: rgb(226, 221, 221);
   height: 90vh;
+  overflow: scroll;
+  padding: 1rem;
 }
 .about p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin-top: 4rem;
+  /* margin: 4rem 0; */
+  padding: 2rem  0;
   line-height: 2rem;
   text-indent: 1rem;
 }
@@ -344,13 +353,37 @@ section {
   background-color: rgb(226, 221, 221);
   height: 90vh;
   width: 100%;
+  overflow: hidden;
   /* align-items: center; */
 }
-.contact-form > :nth-child(1) {
+.contact-things-one {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  height: 70vh;
+  display: block;
+  overflow: hidden;
+
+  width: 100%;
+  /* background-color: #8c38ff; */
+  /* border: 3px solid black; */
+}
+.contact-things-one > *{
+  /* border: 3px solid black; */
+}
+
+.contact-things-two {
+  margin: 10rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   height: 30vh;
+  width: 100%;
+}
+.contact-things-two > *{
+  background-color: rgb(226, 221, 221);
+  display: flex;
+  justify-content: center;
 }
 .contact-form > :nth-child(1) > :nth-child(2) {
   display: flex;
@@ -358,7 +391,13 @@ section {
   align-items: center;
   /* background-color: #8c38ff; */
   height: 10vh;
-  width: 150vmin;
+  width: 100%;
+}
+.contact-item {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* background-color: #b88bf7; */
 }
 .contact-form > :nth-child(1) > :nth-child(2) > * {
   margin: 20px;
@@ -371,11 +410,6 @@ section {
 .icon-contact {
   width: 10vmin;
   height: 10vmin;
-}
-.contact-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .vsc {
   display: none;
@@ -404,5 +438,12 @@ section {
     background-color: #ccc;
     height: 10vh;
     padding: 1rem;
+  }
+  .contact-things-two {
+    flex-direction: column;
+  }
+  .btn{
+    padding: 0.5rem 0.5rem;
+ 
   }
 }

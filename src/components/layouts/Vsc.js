@@ -1,53 +1,32 @@
-import React, { useState } from "react";
-import ReactDom from "react-dom";
-import { Link } from "react-router-dom";
+import { Fragment } from "react";
+import ReactDOM from "react-dom";
+import classes from "./Modal.module.css";
 
-const Vsc = ({ open, children, onClose, overlay, setOverlay }) => {
-  console.log("open is : ", open);
-  const [signup, setSignup] = useState(false);
-  const [forgot, setForgot] = useState(false);
-  const [login, setLogin] = useState(true);
+const Backdrops = (props) => {
+  return <div className={classes.backdrop} onClick={props.onhide} />;
+};
 
-  if (!open) return null;
-  function nulli() {
-    setOverlay(false);
-    setOverlay(true);
-  }
-  return ReactDom.createPortal(
-    <>
-      {overlay && (
-        <div className="main-login">
-          <div className="overlay" onClick={setOverlay(false)} />
-          <section className="login">
-            <div class="box">
-              <div class="container-form">
-                <div class="form">
-                  {login && (
-                    <>
-                      <div className="vsc-res">
-                        <h3>
-                          <Link to="/">Home</Link>
-                        </h3>
-                        <h3>
-                          <Link to="about">About</Link>
-                        </h3>
-                        <h3>
-                          <Link to="contact">Contact</Link>
-                        </h3>
-                        <h3>
-                          <Link to="Products">Products</Link>
-                        </h3>
-                      </div>
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+const ModaloverLay = (props) => {
+  return (
+    <div className={classes.modal}>
+      <div className={classes.content}>{props.children}</div>
+    </div>
+  );
+};
+
+const portalElement = document.getElementById("portal");
+const Vsc = (props) => {
+  return (
+    <Fragment>
+      {ReactDOM.createPortal(
+        <Backdrops onhide={props.onhide} />,
+        portalElement
       )}
-    </>,
-    document.getElementById("portal")
+      {ReactDOM.createPortal(
+        <ModaloverLay>{props.children}</ModaloverLay>,
+        portalElement
+      )}
+    </Fragment>
   );
 };
 

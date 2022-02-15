@@ -1,8 +1,11 @@
 import React from "react";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const VscLogin = (props) => {
+  const numbers = useSelector((state) => state);
+
   return (
     <Modal hiderLogin={props.hiderLogin}>
       <div className="main-login">
@@ -11,22 +14,35 @@ const VscLogin = (props) => {
             <div class="container-form">
               <div class="form">
                 <h2>Menu</h2>
-                <div>
+                <div className="form-vsc"       >
                   <div className="nav-vsc">
                     <h3 className>
-                      <Link to="/">Home</Link>
+                      <Link onClick={props.hiderLogin} to="/">
+                        Home
+                      </Link>
                     </h3>
                     <h3 className>
-                      <Link to="about">About</Link>
+                      <Link onClick={props.hiderLogin} to="about">
+                        About
+                      </Link>
                     </h3>
                     <h3 className>
-                      <Link to="contact">Contact</Link>
+                      <Link onClick={props.hiderLogin} to="contact">
+                        Contact
+                      </Link>
                     </h3>
                     <h3 className>
-                      <Link to="Products">Products</Link>
+                      <Link onClick={props.hiderLogin} to="Products">
+                        Products
+                      </Link>
                     </h3>
-                    <button className="btn" onClick={props.showerLogin}>Login</button>
                   </div>
+                    <div>
+                      <button className="btn" onClick={props.showerLogin}>
+                        Login
+                      </button>
+                      <button className="btn" onClick={props.showCarded}>Card-{numbers.length}</button>
+                    </div>
                 </div>
               </div>
             </div>

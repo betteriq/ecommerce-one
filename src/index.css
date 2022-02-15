@@ -115,12 +115,12 @@ main h1 {
 .products-li {
   background-color: #ffffff;
   width: 25rem;
-  height: 25rem;
+  height: 26rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 1rem;
   /* border: 1px solid red; */
 }
@@ -142,7 +142,7 @@ main h1 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.asli-product{
+.asli-product {
   padding: 0;
   margin: 0;
   display: flex;
@@ -234,7 +234,7 @@ main h1 {
   background-color: #eb6868;
 }
 .btn:hover {
-  background-color: #a064f5;
+  background-color: #b285f1;
 }
 .login {
   position: fixed;
@@ -434,6 +434,67 @@ section {
 .big {
   font-size: 2rem;
 }
+.form-vsc {
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: s; */
+  /* align-items: center; */
+}
+.form-vsc > :nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  height: 15vh;
+  justify-content: center;
+  /* margin-left: 30px; */
+}
+.form-vsc > :nth-child(2) > * {
+  margin: 20px;
+  height: 5vh;
+}
+.nav-vsc > * {
+  margin: 20px;
+}
+.card-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 55vh;
+  border-radius: 10px;
+}
+.card-ul h4 ul {
+  list-style: none;
+}
+.card-ul img {
+  width: 5vmin;
+}
+.card-ul li >:nth-child(1) {
+  white-space: nowrap;
+  width:150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-ul >:nth-child(1){
+  margin-top: -10px;
+}
+.card-ul li {
+  margin-top: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #c7b4e2, 0px 0px 10px #c7b4e2, 0px 0px 10px #c7b4e2,
+    0px 0px 10px #c7b4e2;
+  width: 100%;
+  height: 9vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-ul li p{
+  font-size: 0.9rem;
+}
+.ctf{
+margin: 10px;}
 @media (max-width: 480px) {
   body {
     background-color: #fff;
@@ -465,5 +526,4 @@ section {
     align-items: center;
     overflow: hidden;
   }
-
 }

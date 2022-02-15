@@ -1,26 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Login from "./Login";
 import { VscThreeBars } from "react-icons/vsc";
-import Vsc from "./Vsc";
 
 const Navbar = (props) => {
   const numbers = useSelector((state) => state);
-  const [isOpen, setOpen] = useState(false);
-  const [overlay, setOverlay] = useState(true);
 
-  const [vsc, setVsc] = useState(false);
-
-  const vscFunc = () => {
-    setVsc((prev) => !prev);
-    console.log(vsc);
-  };
   return (
     <nav>
       <div className="asli">
         <h3>
-          <Link to="/">Rashidi Shop</Link>
+          <Link to="/">Rashidi Center</Link>
         </h3>
         <div className="nav-one">
           <h3 className="liner">
@@ -41,12 +31,14 @@ const Navbar = (props) => {
             Login
           </div>
 
-          <button className="btn">Card-{numbers.length}</button>
+          <button className="btn" onClick={props.showCarded}>
+            Card-{numbers.length}
+          </button>
         </div>
       </div>
       <div className="vsc">
-        <h3>vashidi</h3>
-        <VscThreeBars className="big" onClick={props.onshowVsc}/>
+        <h3>Rashidi Center</h3>
+        <VscThreeBars className="big" onClick={props.onshowVsc} />
       </div>
     </nav>
   );

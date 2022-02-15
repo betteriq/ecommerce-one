@@ -142,7 +142,7 @@ main h1 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.asli-product{
+.asli-product {
   padding: 0;
   margin: 0;
   display: flex;
@@ -434,6 +434,28 @@ section {
 .big {
   font-size: 2rem;
 }
+.form-vsc {
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: s; */
+  /* align-items: center; */
+}
+.form-vsc > :nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  height: 15vh;
+  justify-content: center;
+  /* margin-left: 30px; */
+}
+.form-vsc > :nth-child(2) > * {
+  margin: 20px;
+  height: 5vh;
+}
+.nav-vsc>*{
+  margin: 20px;
+
+}
 @media (max-width: 480px) {
   body {
     background-color: #fff;
@@ -465,5 +487,4 @@ section {
     align-items: center;
     overflow: hidden;
   }
-
 }

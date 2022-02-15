@@ -15,6 +15,7 @@ const App = () => {
   const [showLogin, setShow] = useState(false);
   const [showVsc, setVsc] = useState(false);
   const showerLogin = () => {
+    setVsc(false)
     setShow(true);
   };
 

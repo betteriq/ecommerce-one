@@ -20,7 +20,7 @@ const Navbar = (props) => {
     <nav>
       <div className="asli">
         <h3>
-          <Link to="/">Rashidi Shop</Link>
+          <Link to="/">Rashidi Center</Link>
         </h3>
         <div className="nav-one">
           <h3 className="liner">
@@ -45,7 +45,7 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="vsc">
-        <h3>vashidi</h3>
+        <h3>Rashidi Center</h3>
         <VscThreeBars className="big" onClick={props.onshowVsc}/>
       </div>
     </nav>

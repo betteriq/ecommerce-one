@@ -17,7 +17,6 @@ const Products = (props) => {
     }
     boy();
   }, []);
-  const ages = [32, 33, 12, 40];
   const filtering = (cat) => {
     console.log("filtering");
     const vilter = state.filter((x) => x.category === cat);
@@ -55,8 +54,9 @@ const Products = (props) => {
                 <li className="products-li" key={data.id}>
                   <img src={data.image} alt={data.description} />
                   <p>{data.title}</p>
+                  <p>Price : {data.price} $</p>
                   <button className="btn">
-                    <Link to={"product/" + `${data.id}`}>Sell</Link>
+                    <Link to={"product/" + `${data.id}`}>Buy</Link>
                   </button>
                 </li>
               );
@@ -68,7 +68,7 @@ const Products = (props) => {
                   <img src={data.image} alt={data.description} />
                   <p>{data.title}</p>
                   <button className="btn">
-                    <Link to={"product/" + `${data.id}`}>Sell</Link>
+                    <Link to={"product/" + `${data.id}`}>Buy</Link>
                   </button>
                 </li>
               );

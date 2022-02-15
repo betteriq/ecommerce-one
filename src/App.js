@@ -8,35 +8,41 @@ import About from "./components/layouts/About";
 import Product from "./components/layouts/Product";
 import { Provider } from "react-redux";
 import created from "./components/redux/created";
-import Newnavbar from "./components/layouts/Newnavbar";
+import Login from "./components/layouts/Login";
 import VscLogin from "./components/layouts/VscLogin";
+import Card from "./components/layouts/Card";
 
 const App = () => {
   const [showLogin, setShow] = useState(false);
   const [showVsc, setVsc] = useState(false);
+  const [showCard, setCard] = useState(false);
   const showerLogin = () => {
-    setVsc(false)
+    setVsc(false);
     setShow(true);
   };
 
   const hiderLogin = () => {
     setShow(false);
     setVsc(false);
+    setCard(false);
   };
 
   const showerVsc = () => {
     setVsc(true);
   };
 
-  const hiderVsc = () => {
-    setVsc(false);
+  const showCarded = () => {
+    setCard(true);
   };
   return (
     <Provider store={created}>
       <div>
-        <Navbar onshow={showerLogin} onshowVsc={showerVsc} />
-        {showLogin && <Newnavbar hiderLogin={hiderLogin} />}
-        {showVsc && <VscLogin hiderLogin={hiderLogin} showerLogin={showerLogin}/>}
+        <Navbar onshow={showerLogin} onshowVsc={showerVsc} showCarded={showCarded}/>
+        {showLogin && <Login hiderLogin={hiderLogin} />}
+        {showVsc && (
+          <VscLogin hiderLogin={hiderLogin} showerLogin={showerLogin} />
+        )}
+        {showCard && <Card hiderLogin={hiderLogin} />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

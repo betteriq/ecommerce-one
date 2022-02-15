@@ -284,6 +284,9 @@ section {
   transform: translateX(150px);
   /* width: 100%; */
 }
+.card-btn {
+  margin-top: 2rem;
+}
 
 .box {
   position: relative;
@@ -469,13 +472,13 @@ section {
 .card-ul img {
   width: 5vmin;
 }
-.card-ul li >:nth-child(1) {
+.card-ul li > :nth-child(1) {
   white-space: nowrap;
-  width:150px;
+  width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card-ul >:nth-child(1){
+.card-ul > :nth-child(1) {
   margin-top: -10px;
 }
 .card-ul li {
@@ -490,11 +493,12 @@ section {
   justify-content: space-around;
   align-items: center;
 }
-.card-ul li p{
+.card-ul li p {
   font-size: 0.9rem;
 }
-.ctf{
-margin: 10px;}
+.ctf {
+  margin: 10px;
+}
 @media (max-width: 480px) {
   body {
     background-color: #fff;

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 import Login from "./Login";
-import Modal from "./Modal";
 
-const Home = (props) => {
+
+const Home = () => {
+  
   return (
-    <Modal onhide={props.onhide}>
+    <div>
       <main>
         <h1>
           <Typewriter
@@ -18,7 +19,7 @@ const Home = (props) => {
           />
         </h1>
       </main>
-    </Modal>
+    </div>
   );
 };
 

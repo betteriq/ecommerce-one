@@ -9,7 +9,6 @@ const Navbar = (props) => {
   const numbers = useSelector((state) => state);
   const [isOpen, setOpen] = useState(false);
   const [overlay, setOverlay] = useState(true);
-  const [isvOpen, setOpenv] = useState(false);
 
   const [vsc, setVsc] = useState(false);
 
@@ -38,53 +37,16 @@ const Navbar = (props) => {
           </h3>
         </div>
         <div className="nav-two">
-          {/* <button
-            onClick={() => {
-              setOpen(true);
-              setOverlay(true);
-            }}
-            className="btn"
-          >
-            Login
-          </button> */}
           <div className="btn" onClick={props.onshow}>
-            licky
+            Login
           </div>
 
           <button className="btn">Card-{numbers.length}</button>
         </div>
-
-        <Login
-          open={isOpen}
-          onClose={() => {
-            setOpen(false);
-          }}
-          overlay={overlay}
-          setOverlay={setOverlay}
-          onClick={setOverlay}
-        >
-          assa
-        </Login>
       </div>
       <div className="vsc">
-        <Vsc
-          open={isvOpen}
-          onClose={() => {
-            setOpenv(false);
-          }}
-          overlay={overlay}
-          setOverlay={setOverlay}
-        >
-          ss
-        </Vsc>
         <h3>vashidi</h3>
-        <VscThreeBars
-          className="big"
-          onClick={() => {
-            setOpenv(true);
-            setOverlay(true);
-          }}
-        />
+        <VscThreeBars className="big" onClick={props.onshowVsc}/>
       </div>
     </nav>
   );

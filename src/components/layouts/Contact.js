@@ -3,9 +3,9 @@ const Contact = () => {
   return (
     <div className="main-container">
       <div className="container contact-form">
-        <div>
+        <div className="contact-things-one">
           <h2>Contact Form</h2>
-          <div>
+          <div className="contact-things-two">
             <div className="contact-item">
               <img
                 src="./images/icons/icons8-gmail-64.png"

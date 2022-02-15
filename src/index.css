@@ -127,7 +127,7 @@ main h1 {
 .products h3 {
   padding: 2rem;
 }
-.products-btn{
+.products-btn {
   display: flex;
   flex-wrap: wrap;
 }
@@ -142,21 +142,41 @@ main h1 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.asli-product{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-product {
+  margin: 0;
+  width: 100%;
+  height: 90vh;
+  background-color: #8c38ff;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+}
 .product {
   display: flex;
-  width: 60rem;
+  width: 50rem;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   background-color: #fff;
-  /* align-items: center; */
+  align-items: center;
+  overflow: hidden;
 }
+
 .product img {
-  width: 77vh;
+  width: 77vw;
+  height: 70vh;
   border-radius: 10px;
   box-shadow: 0px 0px 10px blue;
 }
 .product-second {
-  margin: 1rem 4rem;
+  margin: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -168,13 +188,7 @@ main h1 {
 .container {
   padding: 1rem;
 }
-.main-product {
-  width: 100%;
-  height: 90vh;
-  background-color: #8c38ff;
-  display: flex;
-  justify-content: center;
-}
+
 .about {
   background-color: rgb(226, 221, 221);
   height: 90vh;
@@ -185,7 +199,7 @@ main h1 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   /* margin: 4rem 0; */
-  padding: 2rem  0;
+  padding: 2rem 0;
   line-height: 2rem;
   text-indent: 1rem;
 }
@@ -368,9 +382,6 @@ section {
   /* background-color: #8c38ff; */
   /* border: 3px solid black; */
 }
-.contact-things-one > *{
-  /* border: 3px solid black; */
-}
 
 .contact-things-two {
   margin: 10rem 0;
@@ -380,7 +391,7 @@ section {
   height: 30vh;
   width: 100%;
 }
-.contact-things-two > *{
+.contact-things-two > * {
   background-color: rgb(226, 221, 221);
   display: flex;
   justify-content: center;
@@ -442,8 +453,17 @@ section {
   .contact-things-two {
     flex-direction: column;
   }
-  .btn{
+  .products .btn {
     padding: 0.5rem 0.5rem;
- 
   }
+  .product {
+    display: flex;
+    width: 50rem;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    align-items: center;
+    overflow: hidden;
+  }
+
 }

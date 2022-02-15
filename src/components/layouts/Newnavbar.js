@@ -15,7 +15,7 @@ const Newnavbar = (props) => {
                 {login && (
                   <>
                     <h2>Login Form</h2>
-                    <form>
+                    <div>
                       <div class="inputbox">
                         <input type="text" placeholder="Username" />
                       </div>
@@ -24,7 +24,11 @@ const Newnavbar = (props) => {
                         <input type="password" placeholder="Password" />
                       </div>
                       <div class="inputbox">
-                        <input type="submit" value="Login" />
+                        <input
+                          type="submit"
+                          value="Login"
+                          onClick={props.hiderLogin}
+                        />
                       </div>
                       <p class="forgot">
                         Forgot password?
@@ -52,13 +56,13 @@ const Newnavbar = (props) => {
                           Sign up
                         </a>
                       </p>
-                    </form>
+                    </div>
                   </>
                 )}
                 {signup && (
                   <>
-                    <h2>Sign up Form</h2>
-                    <form>
+                    <h2>Sign up div</h2>
+                    <div>
                       <div class="inputbox">
                         <input type="text" placeholder="Name" />
                       </div>
@@ -69,26 +73,26 @@ const Newnavbar = (props) => {
                         <input type="text" placeholder="Usename" />
                       </div>
                       <div class="inputbox">
-                        <input type="password" placeholder="Password" />
+                        <input
+                          type="password"
+                          placeholder="Password"
+                          onClick={props.hiderLogin}
+                        />
                       </div>
                       <div class="inputbox">
                         <input
                           type="submit"
                           value="Register"
-                          onClick={() => {
-                            setSignup(false);
-                            setLogin(true);
-                            setForgot(false);
-                          }}
+                          onClick={props.hiderLogin}
                         />
                       </div>
-                    </form>
+                    </div>
                   </>
                 )}
                 {forgot && (
                   <>
                     <h2>Forgot Password</h2>
-                    <form>
+                    <div>
                       <div class="inputbox">
                         <input type="text" placeholder="Enter your Email" />
                       </div>
@@ -97,14 +101,10 @@ const Newnavbar = (props) => {
                         <input
                           type="submit"
                           value="Submit"
-                          onClick={() => {
-                            setForgot(false);
-                            setSignup(false);
-                            setLogin(true);
-                          }}
+                          onClick={props.hiderLogin}
                         />
                       </div>
-                    </form>
+                    </div>
                   </>
                 )}
               </div>

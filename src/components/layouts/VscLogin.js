@@ -10,8 +10,8 @@ const VscLogin = (props) => {
           <div class="box">
             <div class="container-form">
               <div class="form">
-                <h2>Login Form</h2>
-                <form>
+                <h2>Menu</h2>
+                <div>
                   <div className="nav-vsc">
                     <h3 className>
                       <Link to="/">Home</Link>
@@ -25,8 +25,9 @@ const VscLogin = (props) => {
                     <h3 className>
                       <Link to="Products">Products</Link>
                     </h3>
+                    <button className="btn" onClick={props.showerLogin}>Login</button>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>

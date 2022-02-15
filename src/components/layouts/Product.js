@@ -22,10 +22,6 @@ const Product = () => {
       <div className="product container">
         <img src={state.image} alt={state.description} />
         <div className="product-second">
-          <Login open={isOpen} onClose={() => setOpen(false)}>
-            assa
-          </Login>
-
           <h2>{state.title}</h2>
           <p>{state.description}</p>
           <button className="btn" onClick={() => dispatcher(Add(state))}>

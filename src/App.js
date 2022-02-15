@@ -35,7 +35,7 @@ const App = () => {
       <div>
         <Navbar onshow={showerLogin} onshowVsc={showerVsc} />
         {showLogin && <Newnavbar hiderLogin={hiderLogin} />}
-        {showVsc && <VscLogin hiderLogin={hiderLogin} />}
+        {showVsc && <VscLogin hiderLogin={hiderLogin} showerLogin={showerLogin}/>}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

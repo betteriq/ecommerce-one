@@ -59,6 +59,7 @@ code {
   border: none;
   color: aliceblue;
   text-decoration: none;
+  cursor:pointer;
   /* width: 9rem;
   height: 2rem; */
 }
@@ -284,7 +285,8 @@ section {
   transform: translateX(150px);
   /* width: 100%; */
 }
-.card-btn {
+.card-btn,
+.product-second .btn {
   margin-top: 2rem;
 }
 
@@ -458,6 +460,10 @@ section {
 .nav-vsc > * {
   margin: 20px;
 }
+.nav-vsc h3 > * {
+  color: #fff;
+}
+
 .card-ul {
   display: flex;
   flex-direction: column;
@@ -531,7 +537,10 @@ section {
     align-items: center;
     overflow: hidden;
   }
-  .product img{
+  .product-second {
+    overflow: scroll;
+  }
+  .product img {
     width: 77vw;
   }
 }

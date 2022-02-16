@@ -6,25 +6,19 @@ const Products = (props) => {
   const [filter, setFilter] = useState([]);
   const [load, setLoad] = useState(false);
   // const [state, setState] = usePersistedState([]);
+
   useEffect(() => {
-    console.log("hi");
-    async function boy() {
-      const response = await fetch("products.json");
-      console.log(response);
-      const json = await response.json();
-      console.log(json);
-      setState(json);
-    }
-    boy();
-  }, []);
+    fetch("products.json")
+      .then((response) => response.json())
+      .then((data) => setState(data));
+  }, [state]);
+
   const filtering = (cat) => {
-    console.log("filtering");
     const vilter = state.filter((x) => x.category === cat);
-    console.log(vilter);
     setFilter(vilter);
     setLoad(true);
   };
-  console.log("test");
+  
   return (
     <div>
       <div className="products">

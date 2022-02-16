@@ -59,8 +59,7 @@ code {
   border: none;
   color: aliceblue;
   text-decoration: none;
-  /* width: 9rem;
-  height: 2rem; */
+  cursor:pointer;
 }
 main {
   background: url("./images/568622-building-commercial.jpg");
@@ -170,7 +169,7 @@ main h1 {
 }
 
 .product img {
-  width: 77vw;
+  width: 25rem;
   height: 70vh;
   border-radius: 10px;
   box-shadow: 0px 0px 10px blue;
@@ -283,6 +282,10 @@ section {
   border-radius: 30px;
   transform: translateX(150px);
   /* width: 100%; */
+}
+.card-btn,
+.product-second .btn {
+  margin-top: 2rem;
 }
 
 .box {
@@ -455,13 +458,18 @@ section {
 .nav-vsc > * {
   margin: 20px;
 }
+.nav-vsc h3 > * {
+  color: #fff;
+}
+
 .card-ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
-  height: 55vh;
+  height: 45vh;
   border-radius: 10px;
+  overflow-x: hidden;
 }
 .card-ul h4 ul {
   list-style: none;
@@ -469,13 +477,13 @@ section {
 .card-ul img {
   width: 5vmin;
 }
-.card-ul li >:nth-child(1) {
+.card-ul li > :nth-child(1) {
   white-space: nowrap;
-  width:150px;
+  width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card-ul >:nth-child(1){
+.card-ul > :nth-child(1) {
   margin-top: -10px;
 }
 .card-ul li {
@@ -490,11 +498,12 @@ section {
   justify-content: space-around;
   align-items: center;
 }
-.card-ul li p{
+.card-ul li p {
   font-size: 0.9rem;
 }
-.ctf{
-margin: 10px;}
+.ctf {
+  margin: 10px;
+}
 @media (max-width: 480px) {
   body {
     background-color: #fff;
@@ -525,5 +534,11 @@ margin: 10px;}
     background-color: #fff;
     align-items: center;
     overflow: hidden;
+  }
+  .product-second {
+    overflow: scroll;
+  }
+  .product img {
+    width: 77vw;
   }
 }

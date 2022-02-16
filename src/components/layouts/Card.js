@@ -20,7 +20,7 @@ const Card = (props) => {
           <div className="box">
             <div className="container-form">
               <div className="form">
-                <h2>Menu</h2>
+                <h2>Card</h2>
                 <div className="form-vsc">
                   <div className="card-ul">
                     <h4>
@@ -44,7 +44,7 @@ const Card = (props) => {
                     )}
                   </div>
                 </div>
-                <button className="btn" onClick={props.hiderLogin}>
+                <button className="btn card-btn" onClick={props.hiderLogin}>
                   Close
                 </button>
               </div>

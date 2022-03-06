@@ -11,7 +11,7 @@ const Products = (props) => {
     fetch("products.json")
       .then((response) => response.json())
       .then((data) => setState(data));
-  }, [state]);
+  }, []);
 
   const filtering = (cat) => {
     const vilter = state.filter((x) => x.category === cat);
